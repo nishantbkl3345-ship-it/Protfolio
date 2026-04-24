@@ -43,14 +43,14 @@ export default function Projects() {
     <section id="projects" className="bg-white py-24 px-8">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-900 text-center">Projects</h2>
-        <div className="w-16 h-1 bg-[--pink] mx-auto mt-3 mb-4 rounded-full"></div>
+        <div className="w-16 h-1 bg-pink-500 mx-auto mt-3 mb-4 rounded-full"></div>
         <p className="text-gray-500 text-center mt-4 mb-12">Things I've built</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <div
               key={project.name}
-              className="border border-[--border] rounded-2xl p-6 hover:shadow-lg hover:shadow-pink-100 hover:border-[--pink-light] transition-all duration-300 flex flex-col justify-between bg-white"
+              className="border border-pink-100 rounded-2xl p-6 hover:shadow-lg hover:shadow-pink-100 hover:border-pink-400 transition-all duration-300 flex flex-col justify-between bg-white"
             >
               <div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">{project.name}</h3>
@@ -60,7 +60,7 @@ export default function Projects() {
                   {project.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-[--pink-bg] text-[--pink-dark] text-xs px-3 py-1 rounded-full font-medium"
+                      className="bg-pink-50 text-pink-700 text-xs px-3 py-1 rounded-full font-medium"
                     >
                       {tech}
                     </span>
@@ -74,7 +74,7 @@ export default function Projects() {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[--pink] text-sm font-medium hover:underline"
+                    className="text-pink-500 text-sm font-medium hover:underline"
                   >
                     View →
                   </a>
@@ -83,7 +83,7 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[--pink] text-sm font-medium hover:underline"
+                  className="text-pink-500 text-sm font-medium hover:underline"
                 >
                   Code →
                 </a>

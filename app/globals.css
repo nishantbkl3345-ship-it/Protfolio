@@ -1,20 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --pink: #E879A0;
-  --pink-light: #F4C0D1;
-  --pink-bg: #FBEAF0;
-  --pink-dark: #993556;
-  --white: #ffffff;
-  --gray-50: #F9FAFB;
-  --gray-100: #F3F4F6;
-  --gray-600: #4B5563;
-  --gray-900: #111827;
-  --border: #FCE7F3;
+@theme {
+  --color-pink-500: #E879A0;
+  --color-pink-400: #F4C0D1;
+  --color-pink-50: #FBEAF0;
+  --color-pink-700: #993556;
+  --color-pink-100: #FCE7F3;
 }
 
 * {
