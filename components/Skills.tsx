@@ -3,39 +3,44 @@
 const skillsData = [
   {
     category: 'Backend',
-    skills: ['Golang', 'Node.js', 'Gin', 'WebSockets', 'PostgreSQL', 'Redis'],
+    skills: ['Go', 'Gin', 'Node.js', 'REST APIs', 'JWT Auth'],
   },
   {
     category: 'Frontend',
-    skills: ['React', 'HTML', 'CSS', 'JavaScript'],
+    skills: ['React', 'Next.js', 'HTML', 'CSS', 'TypeScript'],
   },
   {
-    category: 'AI/ML',
-    skills: ['Python', 'NumPy', 'Pandas', 'Matplotlib', 'Seaborn', 'Scikit-learn', 'OpenAI Gym'],
+    category: 'AI / ML',
+    skills: ['NumPy', 'Pandas', 'Matplotlib', 'Scikit-learn', 'RL'],
+  },
+  {
+    category: 'Databases',
+    skills: ['MySQL', 'MongoDB', 'PostgreSQL'],
   },
   {
     category: 'Tools',
-    skills: ['Git', 'Docker', 'Linux', 'VS Code', 'MySQL', 'MongoDB'],
+    skills: ['Git', 'Docker', 'Linux', 'VS Code', 'WebSockets'],
   },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-12 text-[#1a1a1a]">Skills</h2>
+    <section id="skills" className="bg-[--gray-50] py-24 px-8">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-gray-900 text-center">Skills</h2>
+        <div className="w-16 h-1 bg-[--pink] mx-auto mt-3 mb-16 rounded-full"></div>
         
-        <div className="grid md:grid-cols-2 gap-8">
-          {skillsData.map((group) => (
-            <div key={group.category}>
-              <h3 className="text-lg font-semibold text-[#E879A0] mb-4">
-                {group.category}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
+          {skillsData.map((category) => (
+            <div key={category.category}>
+              <h3 className="text-[--pink] font-semibold text-sm uppercase tracking-wider mb-4">
+                {category.category}
               </h3>
-              <div className="flex flex-wrap gap-3">
-                {group.skills.map((skill) => (
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 bg-white border-2 border-[#E879A0]/30 text-gray-700 rounded-full text-sm hover:border-[#E879A0] hover:shadow-md transition-all"
+                    className="bg-white border border-[--border] text-gray-700 text-sm px-4 py-2 rounded-full hover:border-[--pink] hover:text-[--pink] transition-colors cursor-default"
                   >
                     {skill}
                   </span>

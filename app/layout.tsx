@@ -2,14 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: '--font-inter',
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nishant - Full Stack Developer | AI & ML",
-  description: "Portfolio of Nishant - Building backend systems, real-time applications, and AI-driven solutions.",
+  title: "Nishant Gour - Full Stack Developer | AI & ML Student",
+  description: "Portfolio of Nishant Gour - Building scalable backend systems, real-time applications, and AI-driven projects.",
 };
 
 export default function RootLayout({
@@ -18,10 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="antialiased">
-        {children}
-      </body>
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
