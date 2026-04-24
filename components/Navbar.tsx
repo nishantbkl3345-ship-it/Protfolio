@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-pink-100">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-pink-100 shadow-sm">
       <div className="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
         <span className="font-mono text-pink-500 font-semibold text-lg">
           {"< nishant.dev />"}
@@ -11,7 +11,7 @@ export default function Navbar() {
             <a 
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="text-gray-600 hover:text-pink-500 text-sm font-medium transition-colors"
+              className="text-gray-600 hover:text-pink-500 text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-pink-500 after:transition-all hover:after:w-full"
             >
               {link}
             </a>

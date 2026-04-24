@@ -40,27 +40,27 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-white py-24 px-8">
+    <section id="projects" className="py-28 px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 text-center">Projects</h2>
-        <div className="w-16 h-1 bg-pink-500 mx-auto mt-3 mb-4 rounded-full"></div>
+        <h2 className="text-4xl font-bold text-gray-900 text-center mb-3">Projects</h2>
+        <div className="w-16 h-1.5 bg-pink-500 rounded-full mx-auto mb-4"></div>
         <p className="text-gray-500 text-center mt-4 mb-12">Things I've built</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-14">
           {projects.map((project) => (
             <div
               key={project.name}
-              className="border border-pink-100 rounded-2xl p-6 hover:shadow-lg hover:shadow-pink-100 hover:border-pink-400 transition-all duration-300 flex flex-col justify-between bg-white"
+              className="group border border-pink-100 rounded-2xl p-7 hover:shadow-xl hover:shadow-pink-100/60 hover:border-pink-300 hover:-translate-y-2 transition-all duration-300 bg-white flex flex-col justify-between cursor-pointer"
             >
               <div>
-                <h3 className="font-bold text-gray-900 text-lg mb-2">{project.name}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{project.desc}</p>
+                <h3 className="font-bold text-gray-900 text-lg mb-3 group-hover:text-pink-500 transition-colors">{project.name}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-5 flex-1">{project.desc}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="bg-pink-50 text-pink-700 text-xs px-3 py-1 rounded-full font-medium"
+                      className="bg-pink-50 text-pink-600 text-xs px-3 py-1.5 rounded-full font-medium border border-pink-100"
                     >
                       {tech}
                     </span>
@@ -68,25 +68,25 @@ export default function Projects() {
                 </div>
               </div>
               
-              <div className="mt-auto flex gap-3">
+              <div className="flex gap-4 mt-auto pt-4 border-t border-gray-100">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-pink-500 text-sm font-semibold hover:text-pink-700 hover:underline transition-colors"
+                >
+                  Code →
+                </a>
                 {project.live && (
                   <a
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-pink-500 text-sm font-medium hover:underline"
+                    className="text-gray-500 text-sm font-medium hover:text-gray-700 transition-colors"
                   >
                     View →
                   </a>
                 )}
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-pink-500 text-sm font-medium hover:underline"
-                >
-                  Code →
-                </a>
               </div>
             </div>
           ))}
