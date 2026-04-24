@@ -1,29 +1,49 @@
 'use client';
 
-const skills = {
-  'Languages': ['Golang', 'C', 'Python', 'JavaScript'],
-  'Frontend': ['React'],
-  'Backend': ['Node.js', 'Golang'],
-  'Database': ['MySQL', 'MongoDB'],
-  'AI/ML': ['NumPy', 'Pandas', 'Scikit-learn'],
-  'Core': ['DSA'],
-};
+const skillsData = [
+  {
+    category: 'Languages',
+    skills: ['Golang', 'C', 'Python', 'JavaScript'],
+  },
+  {
+    category: 'Frontend',
+    skills: ['React'],
+  },
+  {
+    category: 'Backend',
+    skills: ['Node.js', 'Golang'],
+  },
+  {
+    category: 'Database',
+    skills: ['MySQL', 'MongoDB'],
+  },
+  {
+    category: 'AI/ML',
+    skills: ['NumPy', 'Pandas', 'Scikit-learn'],
+  },
+  {
+    category: 'Core',
+    skills: ['DSA'],
+  },
+];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-6 border-t border-gray-900">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Skills</h2>
+    <section id="skills" className="py-20">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold mb-8 text-white">Skills</h2>
         
-        <div className="space-y-6">
-          {Object.entries(skills).map(([category, items]) => (
-            <div key={category}>
-              <h3 className="text-sm font-semibold text-gray-500 mb-3">{category}</h3>
-              <div className="flex flex-wrap gap-2">
-                {items.map((skill) => (
+        <div className="space-y-8 max-w-4xl">
+          {skillsData.map((group) => (
+            <div key={group.category}>
+              <h3 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">
+                {group.category}
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1.5 bg-gray-900 text-gray-300 text-sm rounded border border-gray-800 hover:border-gray-700 transition-colors"
+                    className="px-4 py-2 bg-[#151b2b] text-gray-300 rounded-full text-sm font-medium hover:bg-[#1a2235] transition-colors"
                   >
                     {skill}
                   </span>

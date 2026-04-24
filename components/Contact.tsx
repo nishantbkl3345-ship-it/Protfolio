@@ -20,24 +20,26 @@ const contacts = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 px-6 border-t border-gray-900">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Contact</h2>
+    <section id="contact" className="py-20">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold mb-8 text-white">Contact</h2>
         
-        <div className="space-y-4">
-          {contacts.map((contact) => (
-            <div key={contact.label} className="flex items-center justify-between py-3 border-b border-gray-900">
-              <span className="text-gray-500">{contact.label}</span>
-              <a
-                href={contact.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 transition-colors"
-              >
-                {contact.value}
-              </a>
-            </div>
-          ))}
+        <div className="bg-[#151b2b] rounded-xl p-8 max-w-2xl">
+          <div className="space-y-6">
+            {contacts.map((contact) => (
+              <div key={contact.label} className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <span className="text-gray-400 font-medium">{contact.label}</span>
+                <a
+                  href={contact.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 break-all"
+                >
+                  {contact.value}
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

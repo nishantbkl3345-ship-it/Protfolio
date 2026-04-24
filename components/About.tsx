@@ -2,14 +2,16 @@
 
 export default function About() {
   return (
-    <section id="about" className="py-20 px-6 border-t border-gray-900">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">About</h2>
+    <section id="about" className="py-20">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold mb-8 text-white">About</h2>
         
-        <p className="text-gray-400 leading-relaxed">
-          I am Nishant from Bhiwani, Haryana, pursuing B.Tech in CSE (AI & ML). 
-          I focus on backend development, AI systems, and solving real-world problems through code.
-        </p>
+        <div className="bg-[#151b2b] rounded-xl p-8 max-w-3xl">
+          <p className="text-gray-300 leading-relaxed text-lg">
+            I am Nishant from Bhiwani, Haryana, pursuing B.Tech in CSE (AI & ML). 
+            I focus on backend development, AI systems, and solving real-world problems through code.
+          </p>
+        </div>
       </div>
     </section>
   );
