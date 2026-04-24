@@ -7,43 +7,43 @@ const skillsData = [
   },
   {
     category: 'Frontend',
-    skills: ['React'],
+    skills: ['React', 'HTML', 'CSS'],
   },
   {
     category: 'Backend',
-    skills: ['Node.js', 'Golang'],
+    skills: ['Node.js', 'Go', 'Gin'],
   },
   {
-    category: 'Database',
+    category: 'Databases',
     skills: ['MySQL', 'MongoDB'],
   },
   {
     category: 'AI/ML',
-    skills: ['NumPy', 'Pandas', 'Scikit-learn'],
+    skills: ['NumPy', 'Pandas', 'Matplotlib', 'Seaborn', 'Scikit-learn'],
   },
   {
-    category: 'Core',
-    skills: ['DSA'],
+    category: 'Tools',
+    skills: ['Git', 'GitHub', 'Docker', 'Linux'],
   },
 ];
 
 export default function Skills() {
   return (
     <section id="skills" className="py-20">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-8 text-white">Skills</h2>
+      <div className="max-w-[1100px] mx-auto px-6">
+        <h2 className="text-3xl font-bold mb-8 text-[#f8fafc]">Skills</h2>
         
-        <div className="space-y-8 max-w-4xl">
+        <div className="space-y-8">
           {skillsData.map((group) => (
             <div key={group.category}>
-              <h3 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">
+              <h3 className="text-sm font-semibold text-[#94a3b8] mb-4 uppercase tracking-wide">
                 {group.category}
               </h3>
               <div className="flex flex-wrap gap-3">
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 bg-[#151b2b] text-gray-300 rounded-full text-sm font-medium hover:bg-[#1a2235] transition-colors"
+                    className="px-4 py-2 bg-[#111827] border border-[#1f2937] text-[#f8fafc] rounded-lg text-sm hover:border-[#38bdf8] transition-colors"
                   >
                     {skill}
                   </span>
